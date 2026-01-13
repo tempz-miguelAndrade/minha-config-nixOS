@@ -66,6 +66,13 @@
 	environment.sessionVariables = {
   	PATH = [ "$HOME/.local/bin" ];
 	};
+	environment.shellAliases = {
+  		dash = "dashboard.sh";
+	};
+
+	# Isso garante que sua pasta pessoal de scripts seja vista pelo sistema
+	environment.localBinInPath = true;
+
 
 	# interface cosmic
 	services.desktopManager.cosmic.enable = true;
