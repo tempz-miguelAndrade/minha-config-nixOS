@@ -77,7 +77,7 @@
 	# interface cosmic
 	services.desktopManager.cosmic.enable = true;
 	services.displayManager.cosmic-greeter.enable = true;
-
+	services.displayManager.autoLogin.user = "tempz";
 
 	# versão
 	system.stateVersion = "24.11";
