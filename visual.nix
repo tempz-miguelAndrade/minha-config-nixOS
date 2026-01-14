@@ -18,7 +18,8 @@
     neofetch
     btop
     ncdu
-    cool-retro-term   
+    cool-retro-term 
+    sl  
   ];
 
   # Se você quiser criar apelidos (aliases), coloque-os aqui fora:
