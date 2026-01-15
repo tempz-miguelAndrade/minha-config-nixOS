@@ -62,6 +62,11 @@
     hardware.firmware = with pkgs; [
         sof-firmware
     ];
+
+    boot.kernelParams = [
+        "snd-intel-dspcfg.dsp_driver=3"
+    ];
+
     # ------------------------------
 
     hardware.graphics.enable = true;
