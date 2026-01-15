@@ -18,7 +18,6 @@
     neofetch
     btop
     ncdu
-    cool-retro-term 
     sl  
   ];
 
