@@ -78,7 +78,7 @@
     ];
 
     # --- CORREÇÃO AVANÇADA PARA CONEXANT CX11970 ---
-    boot.kernelParams = [ "snd_hda_intel.model=auto" "snd_hda_intel.probe_mask=1" ];
+    boot.kernelParams = [ "snd_hda_intel.model=alc255-acer" "snd_hda_intel.probe_mask=1" ];
 
   boot.extraModprobeConfig = ''
     # Testaremos o modelo 'laptop-dmic' que é o mais compatível com Raptor Lake
