@@ -13,6 +13,16 @@
         efiSupport = true;
         useOSProber = true;
     };
+
+    # Mantém apenas as últimas 3 versões do sistema para não lotar o boot
+  boot.loader.grub.configurationLimit = 3;
+
+  # Limpeza automática semanal
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
     
     # kernel
     # Mantenha o latest, o Raptor Lake gosta de kernels novos.
