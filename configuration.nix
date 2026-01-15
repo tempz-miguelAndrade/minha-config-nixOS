@@ -51,7 +51,7 @@
     services.pipewire = {
         enable = true;
         alsa.enable = true;
-        alsa.support32Bit = true; # Importante para compatibilidade (jogos/steam)
+        alsa.support32Bit = true;
         pulse.enable = true;
         
         # Se você usar Jack (música profissional), descomente abaixo, mas para uso normal não precisa
@@ -59,7 +59,9 @@
     };
     
     # Garantia extra para firmwares de áudio modernos
-    hardware.firmware = [ pkgs.sof-firmware ];
+    hardware.firmware = with pkgs; [
+        sof-firmware
+    ];
     # ------------------------------
 
     hardware.graphics.enable = true;
