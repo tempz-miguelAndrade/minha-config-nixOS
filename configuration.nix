@@ -13,6 +13,11 @@
         efiSupport = true;
         useOSProber = true;
     };
+
+    boot.loader.grub.extraConfig = ''
+        set linux_cmdline="snd-intel-dspcfg.dsp_driver=1 snd-sof-intel-hda-common.hda_model=alc245-hp"
+    '';
+
     
     # kernel - Ótima escolha para hardware novo (Raptor Lake)
     boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -63,9 +68,13 @@
         sof-firmware
     ];
 
-    boot.kernelParams = [
-        "snd-intel-dspcfg.dsp_driver=3"
-    ];
+    #boot.kernelParams = [
+    #   "snd-intel-dspcfg.dsp_driver=3"
+    #];
+
+    boot.extraModprobeConfig = ''
+    options snd-hda-intel dmic_detect=0
+    '';
 
     # ------------------------------
 
