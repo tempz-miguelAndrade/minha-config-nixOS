@@ -7,17 +7,22 @@
 
 
     # Bootloader
-    boot.loader.efi.canTouchEfiVariables = true;
-
-    boot.loader.grub = {
-        enable = true;
-        device = "nodev";
-        efiSupport = true;
-        useOSProber = true;
-        configurationLimit = 10;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot"; # Certifique-se que este é o local onde sua partição EFI está montada
     };
-
-    boot.loader.timeout = 5;
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+      configurationLimit = 5; # Reduzi para 5 para economizar espaço na partição EFI de 100MB
+      # Essa linha abaixo é o segredo para notebooks Acer/Dual Boot:
+      efiInstallAsRemovable = true; 
+    };
+    timeout = 5;
+  };
 
 
 
