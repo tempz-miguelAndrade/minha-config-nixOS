@@ -9,7 +9,6 @@
     # Bootloader
   boot.loader = {
     efi = {
-      # Mude para false para aceitar o modo Removível
       canTouchEfiVariables = false; 
       efiSysMountPoint = "/boot";
     };
@@ -19,11 +18,12 @@
       efiSupport = true;
       useOSProber = true;
       configurationLimit = 3;
-      efiInstallAsRemovable = true; 
+      efiInstallAsRemovable = true;
+      # AQUI: Como você já está dentro de 'grub', use apenas o nome da opção
+      copyKernels = false; 
     };
     timeout = 5;
   };
-
 
 
 
