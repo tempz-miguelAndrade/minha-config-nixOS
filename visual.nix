@@ -4,6 +4,8 @@
     rebuild = "sudo nixos-rebuild switch -I nixos-config=/home/tempz/Documentos/minha-config-nixOS/configuration.nix";
     limpar = "sudo nix-collect-garbage -d";
     matrix = "neo -D";
+    reniciar = "sudo reboot";
+    desligar = "sudo poweroff";
   };
 
   programs.starship.enable = true;
