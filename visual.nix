@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   programs.bash.shellAliases = {
-    rebuild = "sudo nixos-rebuild switch -I nixos-config=/home/tempz/Documentos/minha-config-nixOS/configuration.nix";
+    reconfigurar = "sudo nixos-rebuild switch -I nixos-config=/home/tempz/Documentos/minha-config-nixOS/configuration.nix";
     ll = "ls -l";
     limpar = "sudo nix-collect-garbage -d";
     matrix = "neo -D";
