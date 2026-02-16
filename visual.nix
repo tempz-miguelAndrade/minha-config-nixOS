@@ -4,8 +4,8 @@
     ll = "ls -l";
     limpar = "sudo nix-collect-garbage -d";
     matrix = "neo -D";
-    ren = "sudo reboot";
-    des = "sudo poweroff";
+    ren = "reboot";
+    des = "poweroff";
   };
 
   programs.starship.enable = true;
