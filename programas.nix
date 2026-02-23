@@ -29,6 +29,7 @@ let
     figlet        # Letras grandes no terminal
     pywal         # Gerador de cores baseado no wallpaper
     nodejs_22
+    nvm
   ];
 
   # --- CATEGORIA: SISTEMA E HARDWARE (Otimizado para i5 13th Gen) ---
