@@ -30,7 +30,7 @@ let
     pywal         # Gerador de cores baseado no wallpaper
     nodejs_22
     nodePackages.vercel
-    nodePackages.@angular/cli
+    nodePackages."@angular/cli"
     
   ];
 
