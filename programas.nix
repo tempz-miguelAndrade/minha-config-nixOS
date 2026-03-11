@@ -31,6 +31,7 @@ let
     nodejs_22
     nodePackages.vercel
     nodePackages."@angular/cli"
+    wineWowPackages.stable
     
   ];
 
