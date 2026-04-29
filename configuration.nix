@@ -158,14 +158,7 @@
     # Starship (Prompt do terminal)
     programs.starship.enable = true;
 
-    # MySQL
-    services.mysql = {
-      enable = true;
-      # O NixOS recomenda usar o MariaDB como engine padrão para o serviço do MySQL
-      package = pkgs.mariadb; 
-    };
-
-
+    
 
     # Versão do sistema (Não altere)
     system.stateVersion = "24.11";
