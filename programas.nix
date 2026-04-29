@@ -32,7 +32,7 @@ let
     nodePackages.vercel
     nodePackages."@angular/cli"
     wineWowPackages.stable
-    
+    mysql
   ];
 
   # --- CATEGORIA: SISTEMA E HARDWARE (Otimizado para i5 13th Gen) ---
