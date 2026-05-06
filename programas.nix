@@ -18,9 +18,9 @@ let
     spotify       # Música
     obsidian      # Notas e organização
     tor-browser   # Navegação privada
-    firefox       # Navegador principal
+    firefox       
     librewolf
-    brave
+    brave         # Navegador principal
     zapzap        # Conversas
   ];
 
