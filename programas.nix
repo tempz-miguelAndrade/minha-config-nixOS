@@ -20,6 +20,7 @@ let
     tor-browser   # Navegação privada
     firefox       # Navegador principal
     librewolf
+    brave
     zapzap        # Conversas
   ];
 
