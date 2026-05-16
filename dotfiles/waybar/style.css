@@ -1,0 +1,92 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+}
+
+/* Corpo principal da barra (Normal) */
+window#waybar {
+    background: rgba(20, 20, 25, 0.15); /* Quase invisível quando uma janela cobre ela */
+    color: #ffffff;
+    border-radius: 0px 12px 12px 0px; 
+    transition: all 0.3s ease-in-out;
+}
+
+/* Quando você encosta o mouse na lateral esquerda da tela */
+window#waybar:hover {
+    background: rgba(20, 20, 25, 0.85); /* Fica escura e totalmente visível */
+}
+
+/* Logo do NixOS no Topo - Sem forçar largura */
+#custom-nixos {
+    color: #ffffff;
+    
+    /* AUMENTADO: De 14px para 20px para dar mais destaque ao ícone */
+    font-size: 20px; 
+    
+    /* Pequeno ajuste no espaçamento para alinhar perfeitamente com o novo tamanho */
+    padding: 12px 10px 0 0;
+}
+
+/* Área das abas (Workspaces) com transição suave */
+#workspaces button {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    color: rgba(255, 255, 255, 0.35); 
+    
+    /* AUMENTADO: De 6px para 10px para a bolinha inativa aparecer mais */
+    font-size: 10px; 
+    
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#workspaces button.active {
+    color: #ffffff; 
+    
+    /* AUMENTADO: De 8px para 14px para dar um destaque bem nítido na aba ativa */
+    font-size: 14px; 
+}
+
+/* Relógio de Horas */
+#clock {
+    font-size: 10px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9);
+    padding-top: 4px;
+    padding-bottom: 6px;
+}
+
+/* Relógio de Data (Quadradinho de Mesa) */
+#clock.date {
+    background-color: #ffffff;
+    color: #141419;
+    font-size: 8px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Módulos de Status inferiores (Bluetooth incluído aqui) */
+#pulseaudio, #network, #bluetooth, #battery {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 6px 3px 6px 0;
+}
+
+/* Efeito ao passar o mouse */
+#pulseaudio:hover, #network:hover, #bluetooth:hover, #battery:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Deixa o ícone azul sutil quando houver dispositivo conectado */
+#bluetooth.connected {
+    color: #96cdfb;
+}
+
+#battery.critical {
+    color: #ff5555;
+}

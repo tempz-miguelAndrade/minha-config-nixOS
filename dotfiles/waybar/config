@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "position": "left",
+    "width": 36,
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 3,
+    
+    "modules-left": [
+        "custom/nixos", 
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock",
+        "clock#date"
+    ],
+    "modules-right": [
+        "pulseaudio", 
+        "network", 
+        "bluetooth", 
+        "battery"
+    ],
+
+    "custom/nixos": {
+        "format": "",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "•",
+        "on-click": "activate",
+        "all-outputs": true,
+        "active-only": false,
+        "persistent-workspaces": {} 
+    },
+
+    "clock": {
+        "format": "{:%H\n%M}",
+        "tooltip": false
+    },
+
+    "clock#date": {
+        "format": "{:%d\n%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "env GTK_THEME=Adwaita:dark pavucontrol"
+    },
+
+    "network": {
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-connected": "󰂱",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}",
+        "format-charging": "󰂄",
+        "format-plugged": "",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
+        "on-click": "kitty --class floating_term -e btop"
+    }
+}

@@ -1,0 +1,19 @@
+# Aumenta o tempo limite de escaneamento para o terminal nunca mais engasgar ou dar aviso
+scan_timeout = 30
+
+[username]
+show_always = true
+style_user = "bold #FF3300"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "bold #FF3300"
+format = " at [$hostname]($style) "
+
+[directory]
+style = "bold cyan"
+
+[character]
+success_symbol = "[➜](bold #FF3300)"
+error_symbol = "[➜](bold red)"
