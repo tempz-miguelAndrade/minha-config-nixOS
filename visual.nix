@@ -10,8 +10,12 @@
 
   programs.starship.enable = true;
   
-  # Variáveis de ambiente para o Pywal ou Temas
+  # Forçar Modo Escuro nos painéis gráficos (E o tamanho compacto das janelas que arrumamos antes)
   environment.sessionVariables = {
     EDITOR = "vim";
+    GTK_THEME = "Adwaita:dark";
+    
+    GDK_DPI_SCALE = "0.9"; 
+    _JAVA_OPTIONS = "-Dsun.java2d.uiScale=0.9";
   };
 }

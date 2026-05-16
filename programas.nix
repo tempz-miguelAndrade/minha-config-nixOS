@@ -47,12 +47,19 @@ let
     pkgs.wdisplays      # GUI para gerenciar telas (substituto visual do Fn+F7)
     pkgs.wev            # Wayland Event Viewer (para debugar se a tecla está respondendo)
     pkgs.brightnessctl  # Controle de brilho via terminal (caso o Fn de brilho falhe)
+
+    hyprpaper
   ];
 
   # --- CATEGORIA: COSMIC NATIVE ---
   cosmic-apps = with pkgs; [
     cosmic-term   # Terminal nativo
     cosmic-files  # Gerenciador de arquivos nativo
+    
+    # GERENCIADOR TOP DE LINHA PARA O HYPRLAND
+    xfce.thunar            # O gerenciador principal
+    xfce.thunar-archive-plugin # Para extrair arquivos .zip/.rar direto no clique
+    xfce.tumbler           # Essencial: Gera as miniaturas (thumbnails) de fotos/vídeos
   ];
 
   # --- CATEGORIA: ESTÉTICA E DIVERSÃO (Movido do visual.nix) ---
